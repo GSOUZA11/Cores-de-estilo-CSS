@@ -1,0 +1,109 @@
+/* CORES -------------------------------------------------------------------- */
+@roxo-dark:         rgb(82, 94, 181);
+@roxo:              rgb(144, 61, 173);
+
+@blue-darker:       #001165;
+@blue-dark:         #0060a3;
+@blue:              #0073e5;
+@blue-light:        rgb(0, 205, 255);
+@blue-aqua:         rgb(70, 188, 218);
+@blue-lighter:      rgb(235, 248, 252);
+
+@darker:            rgb(70,70,70);
+@dark:              rgb(108,108,108);
+@gray:              rgb(192,192,192);
+@gray-light:        rgb(230, 230, 230);
+@gray-lighter:      rgb(249, 249, 249);
+@white:             rgb(255, 255, 255);
+@white-ghost:       rgba(255, 255, 255, 0.8);
+
+@red:               #e04f55;
+@red-dark:          #f43038;
+@red-darker:        rgb(182,46,51);
+
+
+@green-light:       rgb(98,196,34);
+@green:             rgb(143, 194, 75);
+@green-dark:        rgb(81,158,30);
+
+
+@orange-light:      rgb(249,159,45);
+@orange:            rgb(246, 124, 47);
+@orange-dark:       rgb(237,118,68);
+
+
+@base:              #4a91c6;
+@base2:             #64a364;
+@base3:             #999;
+@base4:             #e8a817;
+@blue-light:        #a9cde8;
+
+
+/* PROPRIEDADES --------------------------------------------------------------- */
+.border-radius-padrao{
+    border-radius: 3px !important;
+}
+.box-shadow{
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.1);
+}
+.found-white{
+    padding:18px 10px;
+    background: rgba(255,255,255,0.9);
+}
+
+/* FLEX ----------------------------------------------------------------------- */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------------- 
+:: LOADING
+---------------------------------------------------------------------------- */
+#container-load{
+    background: rgba(255,255,255,0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
+    animation: containerLoad 0.5s ease-out 1 forwards;
+}
+
+// Static ::
+.container-load-static{
+    background: rgba(255,255,255,0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
+    .m-loader--info{
+        margin:-50px 0 0 -50px;
+        &::before{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------- 
+:: ANIMATIONS 
+---------------------------------------------------------------------------- */
+@keyframes containerLoad{
+    from{
+        filter: opacity(1);
+    }to{
+        filter: opacity(0); 
+        z-index: 0;
+    }
+}
